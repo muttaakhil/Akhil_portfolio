@@ -1,0 +1,323 @@
+
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #1e1e2f;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar a {
+  margin-left: 25px;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #42e842;
+}
+
+/* Home */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  gap: 40px;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.home-content h3 {
+  font-size: 1.8rem;
+  color: #42e842;
+}
+
+.home-content p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.btn-box {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 25px;
+  background: #42e842;
+  color: #111;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #35c635;
+  color: #fff;
+}
+
+.home-sci a {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #42e842;
+}
+
+/* Image section */
+.image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #42e842;
+}
+
+/* About */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-img img {
+  width: 250px;
+  border-radius: 50%;
+}
+
+.about-content h3 {
+  color: #42e842;
+  font-size: 1.5rem;
+}
+
+/* Education */
+.education-coloumn .content {
+  background: #2c2c3f;
+  padding: 20px;
+  border-left: 5px solid #42e842;
+  margin-bottom: 20px;
+}
+
+.education-content h3 {
+  margin: 10px 0;
+}
+
+/* Skills */
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.skills-box {
+  width: 100%;
+}
+
+.skills-content .progress {
+  margin-bottom: 15px;
+}
+
+.progress h3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bar {
+  background: #444;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: #42e842;
+  width: 0%;
+  animation: fillBar 2s forwards;
+}
+
+@keyframes fillBar {
+  to {
+    width: 100%;
+  }
+}
+
+/* Projects */
+.projects .portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  opacity: 0;
+  transition: 0.4s;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay .icons span {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Contact */
+.contuct form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.input-field {
+  flex: 1 1 45%;
+  position: relative;
+}
+
+.input-field input,
+.textarea-field textarea {
+  width: 100%;
+  padding: 10px;
+  background: #2c2c3f;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.textarea-field textarea {
+  resize: none;
+  height: 150px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px 10%;
+  background: #222;
+  text-align: center;
+}
+
+.footer-iconTop a {
+  font-size: 1.8rem;
+  color: #42e842;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home, .about, .skills-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image img, .about-img img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+}
